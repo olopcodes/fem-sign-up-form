@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+ <form class="sign-up">
+  <div class="sign-up__img">
+   
+   <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile">
+  </div>
+  <div class="sign-up__content">
+    <div class="sign-up__content-heading">
+      <h2>Stay updated!</h2>
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+    </div>
+    <ul class="sign-up__list">
+      <li>
+        <img src="./assets/images/icon-list.svg" alt="">
+        Product discovery and building what matters
+      </li>
+      <li>
+        <img src="./assets/images/icon-list.svg" alt="">
+        Measuring to ensure updates are a success
+      </li>
+      <li>
+        <img src="./assets/images/icon-list.svg" alt="">
+        And much more!
+      </li>
+    </ul>
+
+    <div class="sign-up__input-field">
+      <label for="email">
+        Email address
+      </label>
+      <p>Valid email required</p>
+      <input type="text" name="email" id="email" placeholder="email@company.com">
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </div>
+  </div>
+ </form>
+
+ <div class="success">
+  <img src="./assets/images/icon-success.svg" alt="">
+  <p class="success-title">Thanks for subscribing!</p>
+  <p class="success-text">A confirmatioin email has been sent to <span>youremail@mail.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+
+  <button class="btn-close">Dismiss message</button>
+ </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

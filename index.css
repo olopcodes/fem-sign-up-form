@@ -1,0 +1,258 @@
+:root {
+    --color-accent: rgb(255, 98, 87);
+
+--color-black: rgb(36, 39, 66);
+--color-dark-gray: hsl(235, 18%, 26%);
+--color-gray:hsl(231, 7%, 60%);
+--color-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* display: grid;
+    place-items: center; */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sign-up {
+    display: grid;
+    max-width: 928px;
+    margin: 0 auto;
+}
+
+.sign-up > div {
+    
+}
+
+.sign-up__img {
+
+}
+
+.sign-up__img img {
+    width: 100%;
+}
+
+.sign-up__content {
+    padding: 3rem 1rem;
+}
+
+.sign-up__content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.sign-up__content p {
+    font-size: 1.25rem;
+    color: var(--color-gray);
+}
+
+.sign-up__content-heading{
+    margin-bottom: 2rem;
+}
+
+.sign-up__list {
+    margin-bottom: 4rem;
+}
+
+.sign-up__list li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--color-dark-gray);
+    margin-bottom: 1rem;
+}
+
+.sign-up__input-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.sign-up__input-field p {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: .875rem;
+    align-self: center;
+    display: none;
+}
+
+.sign-up__input-field.invalid p {
+    display: block;
+    justify-self: flex-end;
+}
+
+.sign-up__input-field.invalid ::placeholder {
+    color: var(--color-accent);
+}
+
+.sign-up__input-field.invalid input {
+    background-color: rgba(255, 98, 87, .4);
+    outline-color: var(--color-accent) !important;
+
+}
+
+label, input[type="text"] {
+    display: block;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-self: center;
+
+}
+
+input[type="text"] {
+    display: block;
+    border: 0;
+    width: 100%;
+    grid-column: span 2;
+    padding: .75rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    position: relative;
+    transition: all 3s;
+}
+
+input[type="text"]:focus {  
+    outline-color: var(--color-black);
+}
+
+button {
+    all: initial;
+    font-family: inherit;
+    cursor: pointer;
+    grid-column: span 2;
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    transition: all .3s ease;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: .875rem;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0px .6rem 2rem rgba(255, 98, 87, .6);
+}
+
+.success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8rem 1rem;
+    gap: 2rem;
+    display: none;
+}
+
+.success-title {
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+.success-text {
+    line-height: 1.75;
+}
+
+.success-text span {
+    font-weight: bold;
+}
+
+.success button {
+    margin-top: auto;
+    align-self: stretch;
+}
+
+body.valid .success{
+    display: flex;
+}
+
+body.valid .sign-up {
+    display: none;
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+    body {
+        background-color: var(--color-black);
+        place-content: center;
+    }
+
+    .sign-up {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: var(--color-white);
+
+    }
+
+    .sign-up__img,
+    .sign-up__img img {
+        border-radius: 10px;
+        height: 100%;
+    }
+
+    .sign-up__img {
+        order: 1;
+    }
+
+    .sign-up__content {
+        padding: 0;
+        order: 0;
+    }
+
+    .success {
+        padding: 4rem;
+        border-radius: 1rem;
+        height: 540px;
+        width: 540px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .sign-up {
+        gap: 3rem;
+        padding: 3rem;
+    }
+}
